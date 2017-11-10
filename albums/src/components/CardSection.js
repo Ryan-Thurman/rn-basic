@@ -1,10 +1,24 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 
 const CardSection = (props) => {
+    // const { container } = style
     return (
-        <div>some div</div>
+        <View style={styles.container}>
+            {props.children}
+        </View>
     );
 };
 
+const styles = {
+    container: {
+        borderBottomWidth: 1,
+        padding: 5,
+        backgroundColor: '#fff',
+        justifyContent: 'flex-start',
+        borderColor: '#ddd',
+        position: 'relative'
+
+    }
+};
 export default CardSection;
