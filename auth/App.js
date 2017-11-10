@@ -5,6 +5,7 @@ import {
 } from 'react-native';
 
 import { Header } from './src/components/common'
+import LoginForm from './src/components/LoginForm'
 
 import firebase from 'firebase';
 import FirebaseConfig from './config/firebase_config'
@@ -19,6 +20,7 @@ export default class App extends Component<{}> {
     return (
       <View>
         <Header />
+        <LoginForm />
         <Text> App is working </Text>
       </View>
     );
