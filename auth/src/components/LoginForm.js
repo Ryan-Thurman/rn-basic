@@ -1,27 +1,42 @@
-import React, { Component } from 'react';
-import { View } from 'react-native';
-import { Button, Card, CardSection } from './common';
+import React, {Component} from 'react';
+// import {View, TextInput} from 'react-native';
+import {Button, Card, CardSection, Input} from './common';
 
 class LoginForm extends Component {
-    render() {
-        return (
-            <Card>
-               <CardSection>
+		constructor(props) {
+				super(props)
+				this.state = {}
+		}
 
-                </CardSection>
+		render() {
+				return (
+						<Card>
+								<CardSection>
+										<Input
+												placeholder={'Email@gmail.com'}
+												label={'Email'}
+												value={this.state.email}
+												onChangeText={(email) => this.setState({email})}/>
+								</CardSection>
 
-                <CardSection>
+								<CardSection>
+										<Input
+												placeholder={'Password'}
+												label={'Password'}
+												value={this.state.password}
+												onChangeText={(password) => this.setState({password})}
+												secureTextEntry={true}
+												/>
+								</CardSection>
 
-                </CardSection>
-
-                <CardSection>
-                    <Button>
-                        Log In
-                    </Button>
-                </CardSection>
-            </Card>
-        )
-    }
+								<CardSection>
+										<Button>
+												Log In
+										</Button>
+								</CardSection>
+						</Card>
+				)
+		}
 }
 
 export default LoginForm;
