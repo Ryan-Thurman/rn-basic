@@ -2,6 +2,53 @@
 # yarn lockfile v1
 
 
+"@firebase/app@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@firebase/app/-/app-0.1.2.tgz#b00565ed04686055e783695bb817ef618bf08bf6"
+  dependencies:
+    "@firebase/util" "^0.1.2"
+
+"@firebase/auth@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@firebase/auth/-/auth-0.2.2.tgz#27af36f565dec5ca6ed6814e8310d78156c5d02c"
+
+"@firebase/database@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@firebase/database/-/database-0.1.3.tgz#50c67e0b2b29c7c9e2ed176450b9223b7befef92"
+  dependencies:
+    "@firebase/util" "^0.1.2"
+    faye-websocket "0.11.1"
+
+"@firebase/firestore@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@firebase/firestore/-/firestore-0.1.4.tgz#e8301ddf329a9643219bc4c9cb6e1ae4e0586c27"
+  dependencies:
+    "@firebase/webchannel-wrapper" "^0.2.4"
+
+"@firebase/messaging@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@firebase/messaging/-/messaging-0.1.3.tgz#fdc405fc41d0e49390a4b9d8e7a5db3c25ae9dd7"
+  dependencies:
+    "@firebase/util" "^0.1.2"
+
+"@firebase/polyfill@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@firebase/polyfill/-/polyfill-0.1.2.tgz#6192c0b7896bc54044c50ff5bc715f6b8fc34820"
+  dependencies:
+    promise-polyfill "^6.0.2"
+
+"@firebase/storage@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@firebase/storage/-/storage-0.1.2.tgz#fc3b2571aa88903bebc81a0f5faef0f45aadaeb9"
+
+"@firebase/util@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@firebase/util/-/util-0.1.2.tgz#1953962d7939b70d31a8c19f9ca17e0bd61a1d9f"
+
+"@firebase/webchannel-wrapper@^0.2.4":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.2.4.tgz#ec8438b780baff09254076efe345f30fdb41243e"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -1294,6 +1341,10 @@ diff@^3.2.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/diff/-/diff-3.4.0.tgz#b1d85507daf3964828de54b37d0d73ba67dda56c"
 
+dom-storage@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/dom-storage/-/dom-storage-2.0.2.tgz#ed17cbf68abd10e0aef8182713e297c5e4b500b0"
+
 dom-walk@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.1.tgz#672226dc74c8f799ad35307df936aba11acd6018"
@@ -1492,6 +1543,12 @@ fast-levenshtein@~2.0.4:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
 
+faye-websocket@0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/faye-websocket/-/faye-websocket-0.11.1.tgz#f0efe18c4f56e4f40afc7e06c719fd5ee6188f38"
+  dependencies:
+    websocket-driver ">=0.5.1"
+
 fb-watchman@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/fb-watchman/-/fb-watchman-2.0.0.tgz#54e9abf7dfa2f26cd9b1636c588c1afc05de5d58"
@@ -1571,6 +1628,20 @@ find-up@^2.0.0, find-up@^2.1.0:
   resolved "https://registry.yarnpkg.com/find-up/-/find-up-2.1.0.tgz#45d1b7e506c717ddd482775a2b77920a3c0c57a7"
   dependencies:
     locate-path "^2.0.0"
+
+firebase@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/firebase/-/firebase-4.6.2.tgz#d4d983d975b98ee27588b25791238a1a1e01a71d"
+  dependencies:
+    "@firebase/app" "^0.1.2"
+    "@firebase/auth" "^0.2.2"
+    "@firebase/database" "^0.1.3"
+    "@firebase/firestore" "^0.1.4"
+    "@firebase/messaging" "^0.1.3"
+    "@firebase/polyfill" "^0.1.2"
+    "@firebase/storage" "^0.1.2"
+    dom-storage "^2.0.2"
+    xmlhttprequest "^1.8.0"
 
 for-in@^1.0.1:
   version "1.0.2"
@@ -1839,6 +1910,10 @@ hoek@4.x.x:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-4.2.0.tgz#72d9d0754f7fe25ca2d01ad8f8f9a9449a89526d"
 
+hoist-non-react-statics@^2.2.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.3.1.tgz#343db84c6018c650778898240135a1420ee22ce0"
+
 home-or-tmp@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/home-or-tmp/-/home-or-tmp-2.0.0.tgz#e36c3f2d2cae7d746a857e38d18d5f32a7882db8"
@@ -1862,6 +1937,10 @@ http-errors@~1.3.1:
   dependencies:
     inherits "~2.0.1"
     statuses "1"
+
+http-parser-js@>=0.4.0:
+  version "0.4.9"
+  resolved "https://registry.yarnpkg.com/http-parser-js/-/http-parser-js-0.4.9.tgz#ea1a04fb64adff0242e9974f297dd4c3cad271e1"
 
 http-signature@~1.1.0:
   version "1.1.1"
@@ -1933,7 +2012,7 @@ inquirer@^3.0.6:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-invariant@^2.2.2:
+invariant@^2.0.0, invariant@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
   dependencies:
@@ -2521,6 +2600,10 @@ locate-path@^2.0.0:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
 
+lodash-es@^4.2.0, lodash-es@^4.2.1:
+  version "4.17.4"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.4.tgz#dcc1d7552e150a0640073ba9cb31d70f032950e7"
+
 lodash._basecopy@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/lodash._basecopy/-/lodash._basecopy-3.0.1.tgz#8da0e6a876cf344c0ad8a54882111dd3c5c7ca36"
@@ -2620,7 +2703,7 @@ lodash@^3.5.0:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lodash@^4.14.0, lodash@^4.16.6, lodash@^4.17.4, lodash@^4.3.0, lodash@^4.6.1:
+lodash@^4.14.0, lodash@^4.16.6, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -3203,13 +3286,17 @@ process@~0.5.1:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/process/-/process-0.5.2.tgz#1638d8a8e34c2f440a91db95ab9aeb677fc185cf"
 
+promise-polyfill@^6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/promise-polyfill/-/promise-polyfill-6.0.2.tgz#d9c86d3dc4dc2df9016e88946defd69b49b41162"
+
 promise@^7.1.1:
   version "7.3.1"
   resolved "https://registry.yarnpkg.com/promise/-/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.8, prop-types@^15.6.0:
+prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
   dependencies:
@@ -3352,6 +3439,17 @@ react-proxy@^1.1.7:
     lodash "^4.6.1"
     react-deep-force-update "^1.0.0"
 
+react-redux@^5.0.6:
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.6.tgz#23ed3a4f986359d68b5212eaaa681e60d6574946"
+  dependencies:
+    hoist-non-react-statics "^2.2.1"
+    invariant "^2.0.0"
+    lodash "^4.2.0"
+    lodash-es "^4.2.0"
+    loose-envify "^1.1.0"
+    prop-types "^15.5.10"
+
 react-test-renderer@16.0.0:
   version "16.0.0"
   resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.0.0.tgz#9fe7b8308f2f71f29fc356d4102086f131c9cb15"
@@ -3429,6 +3527,15 @@ readable-stream@~1.1.8, readable-stream@~1.1.9:
     inherits "~2.0.1"
     isarray "0.0.1"
     string_decoder "~0.10.x"
+
+redux@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
+  dependencies:
+    lodash "^4.2.1"
+    lodash-es "^4.2.1"
+    loose-envify "^1.1.0"
+    symbol-observable "^1.0.3"
 
 regenerate@^1.2.1:
   version "1.3.3"
@@ -3915,6 +4022,10 @@ supports-color@^4.0.0:
   dependencies:
     has-flag "^2.0.0"
 
+symbol-observable@^1.0.3:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.4.tgz#29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d"
+
 symbol-tree@^3.2.1:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.2.tgz#ae27db38f660a7ae2e1c3b7d1bc290819b8519e6"
@@ -4163,6 +4274,17 @@ webidl-conversions@^4.0.0:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-4.0.2.tgz#a855980b1f0b6b359ba1d5d9fb39ae941faa63ad"
 
+websocket-driver@>=0.5.1:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/websocket-driver/-/websocket-driver-0.7.0.tgz#0caf9d2d755d93aee049d4bdd0d3fe2cca2a24eb"
+  dependencies:
+    http-parser-js ">=0.4.0"
+    websocket-extensions ">=0.1.1"
+
+websocket-extensions@>=0.1.1:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.3.tgz#5d2ff22977003ec687a4b87073dfbbac146ccf29"
+
 whatwg-encoding@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/whatwg-encoding/-/whatwg-encoding-1.0.3.tgz#57c235bc8657e914d24e1a397d3c82daee0a6ba3"
@@ -4297,6 +4419,10 @@ xmldoc@^0.4.0:
 xmldom@0.1.x:
   version "0.1.27"
   resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.1.27.tgz#d501f97b3bdb403af8ef9ecc20573187aadac0e9"
+
+xmlhttprequest@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/xmlhttprequest/-/xmlhttprequest-1.8.0.tgz#67fe075c5c24fef39f9d65f5f7b7fe75171968fc"
 
 xpipe@^1.0.5:
   version "1.0.5"

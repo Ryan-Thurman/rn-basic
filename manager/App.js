@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   Platform,
@@ -11,6 +5,13 @@ import {
   Text,
   View
 } from 'react-native';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux'
+import firebase from 'firebase'
+
+import reducers from './src/reducers'
+import Firebase_config from './config/Firebase_config'
+
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -20,19 +21,24 @@ const instructions = Platform.select({
 });
 
 export default class App extends Component<{}> {
+	componentWillMount() {
+		firebase.initializeApp(Firebase_config);
+	}
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
+			<Provider store={createStore(reducers)}>
+				<View style={styles.container}>
+					<Text style={styles.welcome}>
+						Welcome to React Native!
+					</Text>
+					<Text style={styles.instructions}>
+						To get started, edit App.js
+					</Text>
+					<Text style={styles.instructions}>
+						{instructions}
+					</Text>
+				</View>
+			</Provider>
     );
   }
 }
