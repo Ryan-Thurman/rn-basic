@@ -12,6 +12,8 @@ import firebase from 'firebase'
 import reducers from './src/reducers'
 import Firebase_config from './config/Firebase_config'
 
+import LoginForm from './src/components/LoginForm'
+
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -27,17 +29,7 @@ export default class App extends Component<{}> {
   render() {
     return (
 			<Provider store={createStore(reducers)}>
-				<View style={styles.container}>
-					<Text style={styles.welcome}>
-						Welcome to React Native!
-					</Text>
-					<Text style={styles.instructions}>
-						To get started, edit App.js
-					</Text>
-					<Text style={styles.instructions}>
-						{instructions}
-					</Text>
-				</View>
+					<LoginForm />
 			</Provider>
     );
   }
