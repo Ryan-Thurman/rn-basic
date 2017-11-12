@@ -1,4 +1,4 @@
-import {EMAIL_CHANGED, PASSWORD_CHANGED} from './types'
+import {EMAIL_CHANGED, PASSWORD_CHANGED, LOGIN_USER_SUCCESS, LOGIN_USER_FAIL, LOGIN_USER} from './types'
 import firebase from 'firebase'
 
 export const emailChanged = (text) => {
@@ -10,9 +10,27 @@ export const passwordChanged = (text) => {
 }
 
 export const loginUser = ({email, password}) => {
-		firebase
-				.auth()
-				.signInWithEmailAndPassword(email, password)
-				.then(user => console.log(user))
-				.catch(error => console.log('auth failed'))
+		return (dispatch) => {
+				dispatch({type: LOGIN_USER});
+				
+				firebase
+						.auth()
+						.signInWithEmailAndPassword(email, password)
+						.then(user => loginUserSucess(dispatch, user))
+						.catch(() => {
+								firebase
+										.auth()
+										.createUserWithEmailAndPassword(email, password)
+										.then((user) => loginUserSucess(dispatch, user))
+										.catch(() => loginUserFail(dispatch))
+						})
+		}
+}
+
+const loginUserSucess = (dispatch, user) => {
+		dispatch({type: LOGIN_USER_SUCCESS, payload: user})
+}
+
+const loginUserFail = (dispatch) => {
+		dispatch({type: LOGIN_USER_FAIL})
 }
